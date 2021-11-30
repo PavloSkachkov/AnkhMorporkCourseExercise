@@ -1,4 +1,7 @@
 ﻿using System;
+using AnkhMorporkCourseExercise.Encounters;
+using AnkhMorporkCourseExercise.Models;
+using AnkhMorporkCourseExercise.Repositories;
 
 namespace AnkhMorporkCourseExercise
 {
@@ -7,30 +10,19 @@ namespace AnkhMorporkCourseExercise
         static void Main(string[] args)
         {
 
-         var rnd = new Random();
          var player = new Player();
-         var assassinsEncounter = new AssassinsEncounter();
-         var thievesEncounter = new ThievesEncounter();
-         var beggars = new Beggar[11]
-         {
-             new Beggar("Twitcher", 3),
-             new Beggar("Drooler", 2),
-             new Beggar("Dribbler", 1),
-             new Beggar("Mumbler", 1),
-             new Beggar("Mutterers", 0.9),
-             new Beggar("Walking-Along-Shouter", 0.8),
-             new Beggar("Demander of a Chip", 0.6),
-             new Beggar("The one, who Call Other People Jimmy", 0.5),
-             new Beggar("The one, who Need Eightpence For A Meal", 0.08),
-             new Beggar("The one, who Need Tuppence For A Cup Of Tea", 0.02),
-             new Beggar("People With Placards Saying 'Why lie? I need a beer.'", 0)
-         };
-         var beggarsEncounter = new BeggarsEncounter(beggars);
-         var foolsEncounter = new FoolsEncounter();
+         LinesRepository linesStorege = new LinesRepository();
+
+         var assassinsEncounter = new AssassinsEncounter(ConsoleColor.Red, linesStorege.AssassinsStartLine, linesStorege.AssassinsEndLine, new AssassinsRepository());
+         var thievesEncounter = new ThievesEncounter(ConsoleColor.Magenta, linesStorege.ThievesStartLine, linesStorege.ThievesEndLine, new Thiev());
+         var beggarsEncounter = new BeggarsEncounter(ConsoleColor.Green, linesStorege.BeggarsStartLine, linesStorege.BeggarsEndLine, new BeggarsRepository());
+         var foolsEncounter = new FoolsEncounter(ConsoleColor.Yellow, linesStorege.FoolsStartLine, linesStorege.FoolsEndLine, new FoolsRepository());
+
+         var rnd = new Random();
 
             Console.WriteLine(" Well, hello there and welcome to the fine city of Ankh-Morpork!\n" +
                               " You're here with 100 AM$ (Ankh-Morpork dollar). Try to survive and remember to have fun.");
-            while (player.moneyAmount > 0)
+            while (player.IsAlive)
             {
                 switch (rnd.Next(1, 5))
                 {
@@ -46,7 +38,6 @@ namespace AnkhMorporkCourseExercise
                         {
                             thievesEncounter.Action(player);
                             Console.WriteLine($"{player}");
-
                         }
                         break;
                     //Beggars

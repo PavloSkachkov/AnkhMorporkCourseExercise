@@ -1,12 +1,12 @@
-﻿namespace AnkhMorporkCourseExercise
+﻿namespace AnkhMorporkCourseExercise.Models
 {
     public class Assassin
     {
-        public double MinReward { get; private set; }
-        public double MaxReward { get; private set; }
+        public decimal MinReward { get; private set; }
+        public decimal MaxReward { get; private set; }
         public bool IsOccupied { get; set; }
 
-        public Assassin(double minReward, double maxReward)
+        public Assassin(decimal minReward, decimal maxReward)
         {
             this.MinReward = minReward;
             this.MaxReward = maxReward;
