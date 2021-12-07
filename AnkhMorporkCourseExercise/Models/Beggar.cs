@@ -1,14 +1,9 @@
 ﻿namespace AnkhMorporkCourseExercise.Models
 {
-    public class Beggar
+    public class Beggar : NPC
     {
-        public string Name { get; }
-        public decimal Alm { get; }
-
-        public Beggar(string name, decimal alm)
+        public Beggar(string name, decimal dealMoneyAmount) : base(name, dealMoneyAmount)
         {
-            Name = name;
-            Alm = alm;
         }
     }
 }

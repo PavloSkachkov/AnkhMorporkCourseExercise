@@ -6,16 +6,13 @@ namespace AnkhMorporkCourseExercise.Encounters
 {
     class FoolsEncounter : BaseEncounter<Fool>
     {
-        private readonly IRepository<Fool> _foolsRepository;
-
-        public FoolsEncounter(ConsoleColor color, string startLine, string endLine, IRepository<Fool> beggarsRepository) : base(color, startLine, endLine)
+        public FoolsEncounter(ConsoleColor color, string startLine, string endLine, IRepository<Fool> beggarsRepository) : base(color, startLine, endLine, beggarsRepository)
         {
-            _foolsRepository = beggarsRepository;
         }
-        protected override void Accept(Player player)
+
+        protected override void Accept(Player player, Fool npc)
         {
-            var fool = GetRandomEntity(_foolsRepository.Get());
-            player.IncreaseMoneyAmount(fool.Earnings);
+            player.IncreaseMoneyAmount(npc.DealMoneyAmount);
         }
 
         protected override void Decline(Player player)

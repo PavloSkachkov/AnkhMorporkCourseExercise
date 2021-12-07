@@ -7,16 +7,16 @@ namespace AnkhMorporkCourseExercise.Repositories
     {
         private readonly List<Assassin> _assassins = new()
         {
-            new Assassin(1, 3),
-            new Assassin(3, 5),
-            new Assassin(5, 8),
-            new Assassin(7, 12),
-            new Assassin(10, 20),
-            new Assassin(12, 20),
-            new Assassin(15, 19),
-            new Assassin(15, 30),
-            new Assassin(16, 25),
-            new Assassin(20, 30)
+            new Assassin("assassin1", 1, 3),
+            new Assassin("assassin2",3, 5),
+            new Assassin("assassin3",5, 8),
+            new Assassin("assassin4",7, 12),
+            new Assassin("assassin5",10, 20),
+            new Assassin("assassin6",12, 20),
+            new Assassin("assassin7",15, 19),
+            new Assassin("assassin8",15, 30),
+            new Assassin("assassin9",16, 25),
+            new Assassin("assassin10", 20, 30)
         };
 
         public List<Assassin> Get() => _assassins;

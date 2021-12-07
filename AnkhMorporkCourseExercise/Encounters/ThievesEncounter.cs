@@ -1,22 +1,21 @@
 ﻿using System;
 using AnkhMorporkCourseExercise.Models;
+using AnkhMorporkCourseExercise.Repositories;
 
 namespace AnkhMorporkCourseExercise.Encounters
 {
     class ThievesEncounter : BaseEncounter<Thief>
     {
-        private readonly Thief _thief;
-        public ThievesEncounter(ConsoleColor color, string startLine, string endLine, Thief thief) : base(color, startLine, endLine)
+        public ThievesEncounter(ConsoleColor color, string startLine, string endLine, IRepository<Thief> thievesRepository) : base(color, startLine, endLine, thievesRepository)
         {
-            _thief = thief;
         }
 
-        protected override void Accept(Player player)
+        protected override void Accept(Player player, Thief npc)
         {
-            if (_thief.CurrentThefts < _thief.AcceptableNumberOfThefts)
+            if (npc.CurrentThefts < npc.AcceptableNumberOfThefts)
             {
-                player.DecreaseMoneyAmount(_thief.Fee);
-                _thief.CurrentThefts++;
+                player.DecreaseMoneyAmount(npc.DealMoneyAmount);
+                npc.CurrentThefts++;
             }
             else
                 Console.WriteLine(" You're lucky. We did everything we wanted for today.");

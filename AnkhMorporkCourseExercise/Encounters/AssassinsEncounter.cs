@@ -11,13 +11,12 @@ namespace AnkhMorporkCourseExercise.Encounters
     {
         private readonly IRepository<Assassin> _assassinsRepository;
 
-        public AssassinsEncounter(ConsoleColor color, string startLine, string endLine, IRepository<Assassin> assassinsRepository) : base(color, startLine, endLine)
+        public AssassinsEncounter(ConsoleColor color, string startLine, string endLine, IRepository<Assassin> assassinsRepository) : base(color, startLine, endLine, assassinsRepository)
         {
             _assassinsRepository = assassinsRepository;
         }
 
-
-        protected override void Accept(Player player)
+        protected override void Accept(Player player, Assassin npc)
         {
             Console.WriteLine(" How much are you willing to spend on a contract?");
             var rewardString = Console.ReadLine();

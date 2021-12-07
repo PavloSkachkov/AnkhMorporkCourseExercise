@@ -15,7 +15,7 @@ namespace AnkhMorporkCourseExercise.Models
         public void IncreaseMoneyAmount(decimal amount)
         {
             _moneyAmount += amount;
-            Console.WriteLine($" You acquired {amount} AM$");
+            Console.WriteLine($" You acquired {MoneyAmountFormatter.FormatMoneyAmount(amount)}");
         }
 
 
@@ -25,14 +25,14 @@ namespace AnkhMorporkCourseExercise.Models
                 _moneyAmount = 0;
             else
                 _moneyAmount -= amount;
-            Console.WriteLine($" You spent {amount} AM$");
+            Console.WriteLine($" You spent {MoneyAmountFormatter.FormatMoneyAmount(amount)}");
         }
 
         public void Kill() => _moneyAmount = 0;
 
         public override string ToString()
         {
-            return $"{new string('-', 15)}\n You're left with {_moneyAmount} AM$ \n{new string('-', 15)}";
+            return $"{new string('-', 15)}\n You're left with {MoneyAmountFormatter.FormatMoneyAmount(_moneyAmount)} \n{new string('-', 15)}";
         }
     }
 }

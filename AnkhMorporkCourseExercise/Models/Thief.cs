@@ -1,15 +1,13 @@
 ﻿namespace AnkhMorporkCourseExercise.Models
 {
-    public class Thief
+    public class Thief : NPC
     {
         public int AcceptableNumberOfThefts { get; }
-        public decimal Fee { get; }
         public int CurrentThefts { get; set; }
 
-        public Thief()
+        public Thief(string name) : base(name, 10m)
         {
             AcceptableNumberOfThefts = 6;
-            Fee = 10m;
         }
     }
 }
