@@ -13,7 +13,7 @@ namespace AnkhMorporkCourseExercise
          var player = new Player();
 
          var assassinsEncounter = new AssassinsEncounter(ConsoleColor.Red, LinesRepository.AssassinsStartLine, LinesRepository.AssassinsEndLine, new AssassinsRepository());
-         var thievesEncounter = new ThievesEncounter(ConsoleColor.Magenta, LinesRepository.ThievesStartLine, LinesRepository.ThievesEndLine, new Thiev());
+         var thievesEncounter = new ThievesEncounter(ConsoleColor.Magenta, LinesRepository.ThievesStartLine, LinesRepository.ThievesEndLine, new Thief());
          var beggarsEncounter = new BeggarsEncounter(ConsoleColor.Green, LinesRepository.BeggarsStartLine, LinesRepository.BeggarsEndLine, new BeggarsRepository());
          var foolsEncounter = new FoolsEncounter(ConsoleColor.Yellow, LinesRepository.FoolsStartLine, LinesRepository.FoolsEndLine, new FoolsRepository());
 
