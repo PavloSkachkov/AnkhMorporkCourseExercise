@@ -32,6 +32,7 @@ namespace AnkhMorporkCourseExercise.Encounters
             }
 
             Console.WriteLine(" Type 'a' to accept or 'd' to decline");
+
             var answer = Console.ReadLine();
             switch (answer)
             {

@@ -6,7 +6,7 @@ namespace AnkhMorporkCourseExercise.Encounters
 {
     class FoolsEncounter : BaseEncounter<Fool>
     {
-        public FoolsEncounter(ConsoleColor color, string startLine, string endLine, IRepository<Fool> beggarsRepository) : base(color, startLine, endLine, beggarsRepository)
+        public FoolsEncounter(ConsoleColor color, string startLine, string endLine, IRepository<Fool> foolsRepository) : base(color, startLine, endLine, foolsRepository)
         {
         }
 
