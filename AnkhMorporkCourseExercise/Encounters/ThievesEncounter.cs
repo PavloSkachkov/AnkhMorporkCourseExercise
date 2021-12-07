@@ -21,6 +21,5 @@ namespace AnkhMorporkCourseExercise.Encounters
             else
                 Console.WriteLine(" You're lucky. We did everything we wanted for today.");
         }
-        // не более 6ти краж
     }
 }
