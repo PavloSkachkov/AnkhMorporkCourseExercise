@@ -2,15 +2,15 @@
 {
     public class Assassin
     {
-        public decimal MinReward { get; private set; }
-        public decimal MaxReward { get; private set; }
+        public decimal MinReward { get; }
+        public decimal MaxReward { get; }
         public bool IsOccupied { get; set; }
 
         public Assassin(decimal minReward, decimal maxReward)
         {
-            this.MinReward = minReward;
-            this.MaxReward = maxReward;
-            this.IsOccupied = false;
+            MinReward = minReward;
+            MaxReward = maxReward;
+            IsOccupied = false;
         }
     }
 }

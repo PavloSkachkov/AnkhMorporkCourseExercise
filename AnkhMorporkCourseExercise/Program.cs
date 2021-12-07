@@ -11,12 +11,11 @@ namespace AnkhMorporkCourseExercise
         {
 
          var player = new Player();
-         LinesRepository linesStorege = new LinesRepository();
 
-         var assassinsEncounter = new AssassinsEncounter(ConsoleColor.Red, linesStorege.AssassinsStartLine, linesStorege.AssassinsEndLine, new AssassinsRepository());
-         var thievesEncounter = new ThievesEncounter(ConsoleColor.Magenta, linesStorege.ThievesStartLine, linesStorege.ThievesEndLine, new Thiev());
-         var beggarsEncounter = new BeggarsEncounter(ConsoleColor.Green, linesStorege.BeggarsStartLine, linesStorege.BeggarsEndLine, new BeggarsRepository());
-         var foolsEncounter = new FoolsEncounter(ConsoleColor.Yellow, linesStorege.FoolsStartLine, linesStorege.FoolsEndLine, new FoolsRepository());
+         var assassinsEncounter = new AssassinsEncounter(ConsoleColor.Red, LinesRepository.AssassinsStartLine, LinesRepository.AssassinsEndLine, new AssassinsRepository());
+         var thievesEncounter = new ThievesEncounter(ConsoleColor.Magenta, LinesRepository.ThievesStartLine, LinesRepository.ThievesEndLine, new Thiev());
+         var beggarsEncounter = new BeggarsEncounter(ConsoleColor.Green, LinesRepository.BeggarsStartLine, LinesRepository.BeggarsEndLine, new BeggarsRepository());
+         var foolsEncounter = new FoolsEncounter(ConsoleColor.Yellow, LinesRepository.FoolsStartLine, LinesRepository.FoolsEndLine, new FoolsRepository());
 
          var rnd = new Random();
 

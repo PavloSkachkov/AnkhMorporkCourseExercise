@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using AnkhMorporkCourseExercise.Models;
 using AnkhMorporkCourseExercise.Repositories;
 
@@ -30,6 +32,7 @@ namespace AnkhMorporkCourseExercise.Encounters
                 else
                 {
                     assassin.IsOccupied = true;
+                    AssasinRelease(assassin);
                     player.DecreaseMoneyAmount(reward);
                 }
             }
@@ -38,6 +41,15 @@ namespace AnkhMorporkCourseExercise.Encounters
                 Console.WriteLine(" There was no point to joke with us.");
                 Decline(player);
             }
+        }
+
+        protected void AssasinRelease(Assassin assassin)
+        {
+            var task = Task.Run(delegate ()
+            {
+                Thread.Sleep(15000);
+                assassin.IsOccupied = false;
+            });
         }
     }
 }

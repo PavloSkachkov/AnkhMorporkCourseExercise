@@ -2,13 +2,13 @@
 {
     public class Fool
     {
-        public string Name { get; private set; }
-        public decimal Earnings { get; private set; }
+        public string Name { get; }
+        public decimal Earnings { get; }
 
         public Fool(string name, decimal earnings)
         {
-            this.Name = name;
-            this.Earnings = earnings;
+            Name = name;
+            Earnings = earnings;
         }
     }
 }

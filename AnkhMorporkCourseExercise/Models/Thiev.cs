@@ -2,8 +2,8 @@
 {
     public class Thiev
     {
-        public int AcceptableNumberOfThefts { get; private set; }
-        public decimal Fee { get; private set; }
+        public int AcceptableNumberOfThefts { get; }
+        public decimal Fee { get; }
         public int CurrentThefts { get; set; }
 
         public Thiev()
