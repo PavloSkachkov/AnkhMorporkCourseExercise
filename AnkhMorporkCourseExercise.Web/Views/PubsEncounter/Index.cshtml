@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>The Mended Drum</h2>
+<img src="https://i.pinimg.com/564x/9b/fa/98/9bfa9811649929aa6559afb2e092fa81.jpg" class="img-fluid">
+<p> </p>
+
+<form action="/PubsEncounter/Accept" method="post">
+    <label for="customRange3" class="form-label">You can buy one or two beers</label>
+    <input name="moneyAmount" type="range" class="form-range" min="1" max="2" step="1" id="customRange3">
+    <input type="submit" class="btn btn-primary" value="Buy">
+</form>
+<a class="btn btn-warning" href="/PubsEncounter/Decline" role="button">Skip</a>
+

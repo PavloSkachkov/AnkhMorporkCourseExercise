@@ -23,31 +23,31 @@ namespace AnkhMorporkCourseExercise
                               " You're here with 100 AM$ (Ankh-Morpork dollar). Try to survive and remember to have fun.");
             while (player.IsAlive)
             {
-                switch (rnd.Next(1, 5))
+                switch (rnd.Next(0, 4))
                 {
                     // Assassins
-                    case 1:
+                    case 0:
                         {
                             assassinsEncounter.Action(player);
                             Console.WriteLine($"{player}");
                         }
                         break;
                     //Thieves
-                    case 2:
+                    case 1:
                         {
                             thievesEncounter.Action(player);
                             Console.WriteLine($"{player}");
                         }
                         break;
                     //Beggars
-                    case 3:
+                    case 2:
                         {
                             beggarsEncounter.Action(player);
                             Console.WriteLine($"{player}");
                         }
                         break;
                     //Fools
-                    case 4:
+                    case 3:
                         {
                             foolsEncounter.Action(player);
                             Console.WriteLine($"{player}");

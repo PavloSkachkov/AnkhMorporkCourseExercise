@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>You meet a Beggar</h2>
+<img src="https://i.pinimg.com/564x/1c/8e/b2/1c8eb2cd7b6846906d739b9053ea7cb7.jpg" class="img-fluid">
+<h4>Suddenly, you feel a rough pat on your shoulder. You turn around to see a beggar, a plea in his eyes. You can give an Alm or try to ignore him.</h4>
+@{
+    if (ViewBag.DealMoneyAmount == 0)
+    {
+        <p>You will give away one beer</p>
+    }
+    else
+    {
+        <p>You will spend @ViewBag.DealMoneyAmount AM&</p>
+    }
+}
+
+<a class="btn btn-success" href="/BeggarsEncounter/Accept/@ViewBag.Id" role="button">Oblige</a>
+<a class="btn btn-danger" href="/BeggarsEncounter/Decline" role="button">Decline</a>
+
