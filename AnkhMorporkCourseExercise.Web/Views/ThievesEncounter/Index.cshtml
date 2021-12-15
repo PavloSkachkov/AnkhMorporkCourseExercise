@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>You meet thief</h2>
+<img src="https://i.pinimg.com/564x/cf/9b/74/cf9b74bba2e720483c71a3667e25b25c.jpg" class="img-fluid">
+<h4>Out of nowhere you feel a piece of cold, sharp steel pressed firmly against your back and hear a voice, just as cold, demanding to choose between a little payment and your life. You can give away some money or give up.</h4>
+<p>You will spend @ViewBag.DealMoneyAmount</p>
+<a class="btn btn-success" href="/ThievesEncounter/Accept/@ViewBag.Id" role="button">Pay</a>
+<a class="btn btn-danger" href="/ThievesEncounter/Decline" role="button">Resist</a>
+

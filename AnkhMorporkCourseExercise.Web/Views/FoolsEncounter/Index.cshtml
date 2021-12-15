@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>You meet a Fool</h2>
+<img src="https://i.pinimg.com/564x/aa/a6/d3/aaa6d370e58d05d99f8df9c1191f419b.jpg" class="img-fluid">
+<h4>While walking down the street, you sight a fool rapidly approaching you, offering you an ordeal. You can earn some money by replacing him for today or skip it.</h4>
+<p>You will spend @ViewBag.DealMoneyAmount</p>
+<a class="btn btn-success" href="/FoolsEncounter/Accept/@ViewBag.Id" role="button">Accept</a>
+<a class="btn btn-warning" href="/FoolsEncounter/Decline" role="button">Skip</a>
+

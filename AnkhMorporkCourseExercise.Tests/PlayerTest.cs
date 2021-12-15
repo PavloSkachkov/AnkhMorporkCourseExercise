@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AnkhMorporkCourseExercise.Models;
-using Microsoft.VisualStudio.TestPlatform.ObjectModel;
+﻿using AnkhMorporkCourseExercise.Models;
 using NUnit.Framework;
 
 namespace AnkhMorporkCourseExercise.Tests

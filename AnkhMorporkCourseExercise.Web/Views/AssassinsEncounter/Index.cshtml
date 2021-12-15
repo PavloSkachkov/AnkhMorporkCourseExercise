@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>You're in a Shades</h2>
+<h4>It is pretty easy to get into a trouble in here. Someone will definitely kill you. But you can create a contract with the Assassins to protect yourself.</h4>
+<img src="https://i.pinimg.com/564x/59/6d/8c/596d8c999617ce5a65d1e81921ec832e.jpg" class="img-fluid">
+<p> </p>
+
+<form action="/AssassinsEncounter/Accept" method="post">
+    <label for="customRange3" class="form-label">Amount of money for contract</label>
+    <input name="moneyAmount" type="range" class="form-range" min="0" max="30" step="0.5" id="customRange3">
+    <input type="submit" class="btn btn-primary" value="Pay">
+</form>
+<a class="btn btn-danger" href="/AssassinsEncounter/Decline" role="button">Decline</a>
+
